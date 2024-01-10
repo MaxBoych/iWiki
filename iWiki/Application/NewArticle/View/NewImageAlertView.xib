@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewImageAlertView" customModule="iWiki" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="iN0-l3-epB" id="hkT-8X-rl3"/>
+                <outlet property="errorLabel" destination="D0p-jI-0Ql" id="i8j-JY-f00"/>
+                <outlet property="imageNameTextField" destination="oYb-gG-Nwu" id="l95-4C-Mc5"/>
+                <outlet property="imageView" destination="Lpw-QP-GZp" id="aQ3-ic-Ue8"/>
+                <outlet property="view" destination="iN0-l3-epB" id="prq-4S-6kK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-OA-Jbp">
+                    <rect key="frame" x="20" y="298" width="374" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-QP-GZp">
+                            <rect key="frame" x="37" y="8" width="300" height="155"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="155" id="tF9-zu-4g3"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3S-aO-mgR">
+                            <rect key="frame" x="140" y="256" width="94" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Add image"/>
+                            <connections>
+                                <action selector="addImageButton:" destination="-1" eventType="touchUpInside" id="1dl-Ab-Iw2"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-gG-Nwu">
+                            <rect key="frame" x="8" y="179" width="358" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Lpw-QP-GZp" secondAttribute="trailing" constant="37" id="33V-sN-JWk"/>
+                        <constraint firstItem="m3S-aO-mgR" firstAttribute="centerX" secondItem="yPl-OA-Jbp" secondAttribute="centerX" id="DQp-BO-ieF"/>
+                        <constraint firstAttribute="trailing" secondItem="oYb-gG-Nwu" secondAttribute="trailing" constant="8" id="RbJ-vr-zja"/>
+                        <constraint firstAttribute="bottom" secondItem="m3S-aO-mgR" secondAttribute="bottom" constant="8" id="Va2-HQ-Juy"/>
+                        <constraint firstItem="m3S-aO-mgR" firstAttribute="top" secondItem="oYb-gG-Nwu" secondAttribute="bottom" constant="43" id="ad7-W7-zVT"/>
+                        <constraint firstItem="Lpw-QP-GZp" firstAttribute="top" secondItem="yPl-OA-Jbp" secondAttribute="top" constant="8" id="l90-MG-5io"/>
+                        <constraint firstItem="oYb-gG-Nwu" firstAttribute="leading" secondItem="yPl-OA-Jbp" secondAttribute="leading" constant="8" id="mRI-lT-EBY"/>
+                        <constraint firstItem="oYb-gG-Nwu" firstAttribute="top" secondItem="Lpw-QP-GZp" secondAttribute="bottom" constant="16" id="o9e-u5-Zas"/>
+                        <constraint firstItem="Lpw-QP-GZp" firstAttribute="leading" secondItem="yPl-OA-Jbp" secondAttribute="leading" constant="37" id="wxx-nT-ShT"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0p-jI-0Ql">
+                    <rect key="frame" x="36" y="708" width="343" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Oiq-2n-kyM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yPl-OA-Jbp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="254" id="Mu5-jf-4sL"/>
+                <constraint firstItem="D0p-jI-0Ql" firstAttribute="top" secondItem="yPl-OA-Jbp" secondAttribute="bottom" constant="110" id="N1h-0U-a4G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yPl-OA-Jbp" secondAttribute="trailing" constant="20" id="XfH-5F-i7l"/>
+                <constraint firstItem="D0p-jI-0Ql" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="s6d-q2-kYo"/>
+                <constraint firstItem="yPl-OA-Jbp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tmn-Az-WrN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D0p-jI-0Ql" secondAttribute="trailing" constant="35" id="zBy-KK-FTK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>

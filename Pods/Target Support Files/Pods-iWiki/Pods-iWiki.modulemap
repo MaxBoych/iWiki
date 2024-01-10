@@ -1,0 +1,6 @@
+framework module Pods_iWiki {
+  umbrella header "Pods-iWiki-umbrella.h"
+
+  export *
+  module * { export * }
+}
